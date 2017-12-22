@@ -25,7 +25,7 @@
       </tr>
     </thead>
     <tbody>
-      <%= departures.each do |d| %>
+      <% departures.each do |d| %>
         <tr>
           <td><%= d.carrier %></td>
           <td><%= d.scheduled_time.strftime("%I:%M:%S %p")%></td>
