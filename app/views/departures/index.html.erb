@@ -1,0 +1,3 @@
+<% @departures_by_origin.each do |origin, departures| %>
+  <%= render "origin_station_table", departures: departures, origin: origin, current_time: @current_time %>
+<% end %>

@@ -1,0 +1,40 @@
+
+<div class="departures-container">
+  <div class="departures-headline">
+    <div class="departure-time">
+      <span><%= current_time.strftime("%A")%></span>
+      <span><%= current_time.strftime("%m-%d-%Y")%></span>
+    </div>
+    <div class="departure-sign">
+      <%= origin %> Departures
+    </div>
+    <div class="departure-time right">
+      <span>Current Time</span>
+      <span><%=current_time.strftime("%I:%M:%S %p")%></span>
+    </div>
+  </div>
+  <table class="departures-table">
+    <thead>
+      <tr>
+        <th>Carrier</th>
+        <th>Time</th>
+        <th>Destination</th>
+        <th>Train#</th>
+        <th>Track#</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= departures.each do |d| %>
+        <tr>
+          <td><%= d.carrier %></td>
+          <td><%= d.scheduled_time.strftime("%I:%M:%S %p")%></td>
+          <td><%= d.destination_station.name %></td>
+          <td><%= d.trip_number %></td>
+          <td><%= d.track_number_display %></td>
+          <td><%= d.status_before_type_cast %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

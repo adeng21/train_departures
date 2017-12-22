@@ -1,0 +1,34 @@
+.departures-container {
+  background-color: black;
+  padding: 5px;
+  opacity: 0.8;
+}
+
+.departures-headline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.departure-sign {
+  text-transform: uppercase;
+  font-size: 14pt;
+  color: #C0C0C0;
+}
+
+.departure-time {
+  display: flex;
+  flex-direction: column;
+  font-size: 14pt;
+  text-transform: uppercase;
+  color: #ffff00;
+}
+
+.departures-table {
+  th {
+    color: #C0C0C0;
+  }
+
+  td {
+    color: #ffff00;
+  }
+}
